@@ -8,7 +8,9 @@ import nltk
 # Import CORS
 from flask_cors import CORS
 
+
 CORS(app)
+
 
 nltk.download('words')
 nlp = spacy.load("en_core_web_sm")
@@ -145,3 +147,4 @@ def spell_check_word(word):
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
+
